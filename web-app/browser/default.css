@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap");
+@import url('http://fonts.cdnfonts.com/css/games');
+
+:root {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.625em; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 0px;
+    margin: 0;
+    width: 100%;
+    background-size: cover;
+    background-size: auto;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+
+}
+
+li {
+    float: left;
+    list-style-type:none;
+    border-right: 1px solid white;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: #85796b;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-image: linear-gradient(#d0d0d0, #f0f0f0);
+}
+
+li a:hover {
+    background-color:#edcb50;
+}
+
+#navigation ul {
+    font-size: 1.5em;
+    text-shadow: -1px -1px 0 #f3c008;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    margin: auto;
+    max-width: 60rem;
+    color: white;
+    background: linear-gradient(to right top, #debb3d, #e2aa2b, #e6981c, #e98513, #eb7012);
+    background-attachment: fixed; /*fits the background image to the whole screen*/
+}
+
+header {
+    text-align: center;
+    margin-top: 30px;
+}  
+
+.title2 {
+    font-size: 90px;
+    display: inline;
+    font-family: "Montserrat", sans-serif;
+    height: 90px;
+    color: white;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: 100;
+}
+
+div {
+    height: 2rem;
+    width: 2rem;
+}
+
+.score {
+    padding-top: 10px;
+    font-size: 15px;
+    color: #919191;
+    font-weight: 100;
+}
+
+.score-display {
+    font-size: 30px;
+    color: #919191;
+    font-weight: 400;
+
+}
+
+.lines-display {
+    padding-top: 1rem;
+    font-size: 12px;
+    font-weight: 200;
+    color: #919191;
+}
+  
+.game-area {
+    display: flex;
+    padding-left: 110px;
+    justify-content: center;
+  }
+  
+.game {
+    height: 0;
+    width: 300px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 5px;
+    border-width: 5px;
+    width: 20rem;
+    height: 40rem;
+    background: #f0f0f0;
+    background-image: linear-gradient(#d0d0d0, #f0f0f0);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+    color: #85796b;  
+}
+
+.previous-shape {
+    width: 10rem;
+    padding-left: 2rem;
+    margin-top: -5rem;
+}
+
+.previous-text {
+    font-size: 13px;
+    color: #919191;
+    font-weight: 100;
+    white-space: nowrap;
+    justify-content: center;
+
+}
+  
+.previous-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 8rem;
+    height: 8rem;
+}
+  
+.end {
+    background-color: #d8edea;
+}
+
+.button {
+    position: relative;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    margin: 18px;
+    color: #fff;
+    width: 120px;
+    height: 30px;
+    text-decoration: none;
+    line-height: 23px;
+    font-size: 13px;
+    text-shadow: -1px -1px 0 #f3c008;
+    background: #DEBB3D;
+    border: 1px solid #e0b51a;
+    background-image: linear-gradient(to bottom, #d7ad15, #edcb50);
+    border-radius: 20px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset,
+      0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 4px 0 #f8c81c,
+      0 4px 2px rgba(0, 0, 0, 0.5);
+}
+  
+.button:before {
+    border-radius: 5px;
+    position: absolute;
+    content: "";
+    left: -6px;
+    right: -6px;
+    top: -6px;
+    bottom: -10px;
+    z-index: -1;
+}
+  
+.button:active {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset,
+      0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    top: 5px;
+}
+  
+.button:active:before {
+    top: -11px;
+    bottom: -5px;
+    content: "";
+}
+  
+.button:hover {
+    background: #debf51;
+    background-image: linear-gradient(top, #e2b511, #edcf61);
+}
+
+.end {
+    background-image: url("images/blue_tetromino.png");
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 250px;
+    background: #f0f0f0;
+    background-image: linear-gradient(#d0d0d0, #f0f0f0);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+    color: #85796b;
+}
+
+
+
+
+
+
+
+
+
